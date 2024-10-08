@@ -1,0 +1,1 @@
+ export function unlockAudioContext(cb) { const b = document.body; const events = ["click", "touchstart", "touchend", "mousedown", "keydown"]; events.forEach(e => b.addEventListener(e, unlock, false)); function unlock() {cb(); clean(); console.log("!!!!!!!")} function clean() {events.forEach(e => b.removeEventListener(e, unlock));} }
